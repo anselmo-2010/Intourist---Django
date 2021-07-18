@@ -5,7 +5,6 @@ from places.models import Place
 from .factories import PlaceFactory
 
 
-
 class PlacesListTestCase(TestCase):
     def test_open_list_success(self):
         place_1 = PlaceFactory()
@@ -19,8 +18,6 @@ class PlacesListTestCase(TestCase):
         place_2_db = Place.objects.get(name='Place number 1')
         self.assertEqual(place_2_db.location, places[1].location)
        
-
-
 
 class PlaceCreateTestCase(TestCase):
     def test_create_place_success(self):
